@@ -1,0 +1,50 @@
+// Sample Code for Parts of a plant – ED – Create and label the parts of a plant – G1-3
+
+
+var stem=function(){
+    strokeWeight(16); 
+    stroke(100,255,100);
+    line(200,120,200,300); 
+}; 
+stem();
+
+var petals=function(){ 
+    noStroke(); 
+    strokeWeight(1); 
+    translate(200,80);
+    for (var name=0; name<6; name++) {
+        rotate(30);
+        fill(255,100,50);
+        ellipse(0,0,30,140);
+    }
+}; 
+petals(); 
+
+var pistil=function(){
+    resetMatrix();
+    noStroke(); 
+    strokeWeight(1); 
+    fill(255,255,0);
+    ellipse(200,80,50,50);
+}; 
+pistil(); 
+
+var leaf=function(){ 
+    stroke(100,255,100);
+    fill(100,255,100);
+    rotate(30);
+    ellipse(300,80,20,80); 
+}; 
+leaf(); 
+
+var roots=function(){
+    resetMatrix();
+    strokeWeight(5); 
+    stroke(205,135,25); 
+    line(200,310,300,325);
+    line(200,310,250,325);
+    line(200,310,150,325);
+    line(200,310,210,325);
+}; 
+
+roots(); 
