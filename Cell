@@ -1,0 +1,37 @@
+var cellMembrane=function(){
+    stroke(10,255,10); 
+    //cytoplasm is in light green
+    fill(200,255,100);
+    ellipse(200,200,350,380);
+}; 
+cellMembrane(); 
+
+var nucleus=function(){ 
+    //nuclear membrane in dark purple
+    stroke(190,0,255); 
+    fill(250,150,255);
+    ellipse(140,180,110,80);
+};
+nucleus(); 
+
+var mitochondria=function(){
+    //Mitocondrial Membrane
+    stroke(255,108,80);
+    //Intermembrane Space 
+    fill(255,128,120);
+    ellipse(100,100,80,50); 
+    //Mitocondrial Matrix
+    for (var i=0; i<5; i++){
+    line(80,86,80,112);
+    line(70,86,80,112);  
+    translate(10,0); 
+    }
+    resetMatrix(); 
+}; 
+
+// Create multiple mitochondria 
+mitochondria(); 
+translate(100,200);
+mitochondria(); 
+translate(100,20);
+mitochondria();
